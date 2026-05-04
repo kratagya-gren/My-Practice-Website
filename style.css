@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: black;
+}
+
+.main {
+  background-image: url("assets/img/bg.jpg");
+  height: 99vh;
+  width: 100%;
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: max(1300px, 100vw);
+}
+
+.main .box {
+  height: 100vh;
+  width: 100%;
+  opacity: 0.75;
+  background-color: black;
+  position: absolute;
+  top: 0;
+}
+
+nav {
+  margin: auto;
+  display: flex;
+  max-width: 80vw;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+
+nav img {
+  color: red;
+  width: 150px;
+  position: relative;
+  z-index: 10;
+}
+
+nav button {
+  position: relative;
+  z-index: 10;
+  width: 100px;
+}
+
+.hero {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  font-size: 65px;
+  font-weight: 900;
+  background-size: max(500px, 40vw);
+  position: absolute;
+  top: 0;
+  padding-top: 80px;
+}
+
+.hero span:nth-child(3) {
+  font-weight: normal;
+  margin-top: 1rem;
+  font-size: 22px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+.hero span:nth-child(4) {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #ffffff;
+  margin-top: 2rem;
+}
+
+.separation {
+  width: 120%;
+  left: -10%;
+  box-sizing: border-box;
+  position: absolute;
+  height: 80vh;
+  top: 90vh;
+  border-top-left-radius: 50% 14%;
+  border-top-right-radius: 50% 14%;
+  margin: auto;
+  border-bottom: none;
+  background-clip: padding-box;
+  background: linear-gradient(
+    to right,
+    rgba(33, 13, 22, 1) 16%,
+    rgba(184, 40, 105, 1),
+    rgba(229, 9, 20, 1),
+    rgba(184, 40, 105, 1),
+    rgba(33, 13, 22, 1) 84%
+  );
+}
+
+.overlap {
+  width: 120%;
+  left: -10%;
+  box-sizing: border-box;
+  position: absolute;
+  height: 80vh;
+  top: 90vh;
+  border-top-left-radius: 50% 13%;
+  border-top-right-radius: 50% 13%;
+  margin-top: 0.3rem;
+  background: radial-gradient(
+      50% 500% at 50% -420%,
+      rgba(64, 97, 231, 0.4) 80%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    black;
+}
+
+.separation {
+  width: 120%;
+  background-color: white;
+}
+
+.btn {
+  padding: 3px 8px;
+  background-color: transparent;
+  font-weight: 500;
+  color: rgb(204, 204, 204);
+  border: 0.5px rgb(131, 131, 131) solid;
+  font-size: 18px;
+  border-radius: 3px;
+}
+
+.btn-red {
+  background-color: red;
+  color: white;
+  font-size: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 3px;
+}
+
+.btn-srch {
+  color: white;
+  background-color: red;
+  padding-left: 30px;
+  padding-right: 25px;
+  padding-top: 11px;
+  padding-bottom: 18px;
+  font-size: 28px;
+  border-radius: 3px;
+  border: transparent;
+  font-weight: 500;
+}
+
+.main input {
+  background-color: rgba(0, 0, 0, 0.589);
+  padding-left: 20px;
+  padding-right: 200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 2.2px solid grey;
+  margin: 0;
+  font-weight: 400;
+  color: rgb(158, 158, 158);
+}
+
+.trending {
+  font-style: sans-serif;
+  color: white;
+  font-size: 27px;
+  font-weight: 400;
+  position: relative;
+  top: 0;
+  left: 135px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.scroll {
+  height: 250px;
+  z-index: 5;
+  position: relative;
+  top: 50px;
+  left: 100px;
+}
+
+.poster {
+  width: 197px;
+  height: 276px;
+  z-index: 15;
+  background-image: url("assets/img/OG.jpg");
+  position: relative;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.unorder {
+  display: flex;
+  overflow-y: visible;
+  overflow-x: scroll;
+  list-style: none;
+  scrollbar-width: none;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+  padding-inline-start: 1rem;
+  scroll-snap-type: x mandatory;
+  scroll-margin-inline-start: 2.5em;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.poster1 {
+  width: 196px;
+  height: 276px;
+  z-index: 15;
+  background-image: url("assets/img/IK.jpg");
+  position: relative;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.movie1 {
+  margin-right: 20px;
+  transition: transform 0.3s;
+  border-radius: 12px;
+  border: transparent;
+}
+
+.poster2 {
+  width: 196px;
+  height: 276px;
+  z-index: 15;
+  background-image: url("assets/img/stth.jpg");
+  position: relative;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.poster3 {
+  width: 196px;
+  height: 276px;
+  z-index: 15;
+  background-image: url("assets/img/dude.jpg");
+  position: relative;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.poster4 {
+  width: 196px;
+  height: 276px;
+  z-index: 15;
+  background-image: url("assets/img/jllb3.jpg");
+  position: relative;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.poster5 {
+  width: 196px;
+  height: 276px;
+  z-index: 15;
+  background-image: url("assets/img/the_gf.jpg");
+  position: relative;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.poster6 {
+  width: 196px;
+  height: 276px;
+  z-index: 15;
+  background-image: url("assets/img/kaantha.jpg");
+  position: relative;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.poster7 {
+  width: 196px;
+  height: 276px;
+  z-index: 15;
+  background-image: url("assets/img/kaantha.jpg");
+  position: relative;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.poster8 {
+  width: 196px;
+  height: 276px;
+  z-index: 15;
+  background-image: url("assets/img/s_p.jpg");
+  position: relative;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.poster9 {
+  width: 196px;
+  height: 276px;
+  z-index: 15;
+  background-image: url("assets/img/.jpg");
+  position: relative;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+

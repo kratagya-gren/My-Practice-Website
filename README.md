@@ -1,2 +1,2 @@
-# My-Practice-Website
-basic HTML,CSS websit
+# My-first-website
+Basic HTML CSS website
